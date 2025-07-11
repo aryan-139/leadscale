@@ -7,6 +7,8 @@ chrome.runtime.onInstalled.addListener(() => {
   });
 });
 
+chrome.tabs.sendMessage(tab.id, { action: "refreshStackUI" });
+
 // Handle context menu click
 chrome.contextMenus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === "send-selected-text") {
@@ -43,7 +45,10 @@ function sendSelectedText(tab) {
           body: JSON.stringify({ value: selectedText }),
         })
           .then((res) => res.json())
-          .then((data) => console.log("✅ Sent to server:", data))
+          .then((data) => {
+            console.log("✅ Sent to server:", data);
+            chrome.tabs.sendMessage(tab.id, { action: "refreshStackUI" });
+          })          
           .catch((err) => console.error("❌ Error sending text:", err));
       } else {
         console.log("⚠️ No text selected");

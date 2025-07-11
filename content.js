@@ -1,3 +1,9 @@
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message.action === "refreshStackUI") {
+    fetchStack();
+  }
+});
+
 (function () {
   console.log("📦 content script loaded");
     const existingBox = document.getElementById("text-stack-box");
@@ -53,11 +59,13 @@
         .then((data) => {
           stackList.innerHTML = "";
           if (Array.isArray(data) && data.length > 0) {
-            data.forEach((item, index) => {
+            data.slice().reverse().forEach((item, index) => {
               const li = document.createElement("li");
-              li.textContent = `${index + 1}. ${item}`;
+              li.textContent = `${data.length - index}. ${item}`;
               li.style.borderBottom = "1px solid #eee";
               li.style.padding = "4px 0";
+              li.style.transition = "background 0.3s ease";
+              li.style.backgroundColor = index === 0 ? "#ffffcc" : ""; // highlight newest
               stackList.appendChild(li);
             });
           } else {
@@ -71,5 +79,6 @@
           console.error("❌ Failed to fetch stack:", err);
         });
     }
+    
   })();
   
