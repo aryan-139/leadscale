@@ -1,9 +1,3 @@
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-  if (message.action === "refreshStackUI") {
-    fetchStack();
-  }
-});
-
 (function () {
   console.log("📦 content script loaded");
     const existingBox = document.getElementById("text-stack-box");
