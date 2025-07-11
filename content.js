@@ -1,4 +1,5 @@
 (function () {
+  console.log("📦 content script loaded");
     const existingBox = document.getElementById("text-stack-box");
     if (existingBox) return;
   
