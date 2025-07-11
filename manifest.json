@@ -9,8 +9,8 @@
   "commands": {
     "send-selected-text": {
       "suggested_key": {
-        "default": "Ctrl+Shift+S",
-        "mac": "Command+Shift+S"
+        "default": "Alt+Shift+X",
+        "mac": "Option+Shift+X"
       },
       "description": "Send selected text to FastAPI"
     }
