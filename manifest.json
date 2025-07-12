@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Text to Stack Sender",
+  "name": "SendStack",
   "version": "1.0",
   "permissions": ["contextMenus", "activeTab", "scripting"],
   "background": {
