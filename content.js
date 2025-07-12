@@ -2,6 +2,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const stackList = document.getElementById("stack-list");
   const refreshButton = document.getElementById("refresh-button");
+  const triggerButton = document.getElementById("trigger-button");
 
   function fetchStack() {
     fetch("http://127.0.0.1:8000/stack")
@@ -26,8 +27,13 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("❌ Failed to fetch stack:", err);
       });
   }
-
+  function triggerHandler() {
+    console.log("🔄 Triggering handler...");
+  }
+  
   refreshButton.onclick = fetchStack;
+  triggerButton.onclick = triggerHandler;
 
   fetchStack(); 
+
 });
