@@ -1,31 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>📦 Send Stack</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div id="text-stack-box">
-    <div class="stack-title">🗂️ Stack Viewer</div>
+  <head>
+    <meta charset="UTF-8" />
+    <title>📦 Send Stack</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="text-stack-box">
+      <div class="stack-title">🗂️ Lead List Viewer</div>
 
-    <ul id="stack-list">
-      <li>Loading...</li>
-    </ul>
+      <ul id="stack-list">
+        <li>Loading...</li>
+      </ul>
 
-    <!-- 👇 Controls stay visible -->
-    <div id="stack-controls">
-      <label for="company-name">🏢 Company Name</label>
-      <input
-        type="text"
-        id="company-name"
-        placeholder="Enter company name"
-      />
-      <button id="refresh-button">🔄 Refresh</button>
-      <button id="trigger-button">📤 Trigger Action</button>
+      <!-- 👇 Controls stay visible -->
+      <div id="stack-controls">
+        <div class="form-group">
+          <label for="intent">🎯 Intent</label>
+          <select id="intent">
+            <option value="referral">Referral</option>
+            <option value="opening_enquiry">Opening Enquiry</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="company-name">🏢 Company Name</label>
+          <input
+            type="text"
+            id="company-name"
+            placeholder="Enter company name"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="job-description">📄 Job Description</label>
+          <input
+            type="text"
+            id="job-description"
+            placeholder="Enter job description"
+          />
+        </div>
+
+        <div class="button-group">
+          <button id="refresh-button">🔄 Refresh</button>
+          <button id="trigger-button">📤 Trigger Action</button>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <script src="content.js"></script>
-</body>
+    <script src="content.js"></script>
+  </body>
 </html>

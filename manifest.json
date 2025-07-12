@@ -14,11 +14,13 @@
   "content_scripts": [
     {
       "matches": [
-        "https://www.linkedin.com/*",
-        "https://linkedin.com/*"
+        "<all_urls>"
       ],
       "js": [
         "content.js"
+      ],
+      "css": [
+        "style.css"
       ],
       "run_at": "document_idle"
     }
@@ -37,8 +39,7 @@
     "default_icon": "lead_gen.png"
   },
   "host_permissions": [
-    "https://www.linkedin.com/*",
-    "https://linkedin.com/*",
+    "<all_urls>",
     "http://127.0.0.1:8000/"
   ]
 }

@@ -20,6 +20,32 @@ body {
     font-weight: bold;
     margin-bottom: 8px;
   }
+
+  .stack-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .stack-item.highlight {
+    background-color: #ffffcc;
+  }
+  
+  .stack-text {
+    flex: 1;
+  }
+  
+  .delete-btn {
+    margin-left: 10px;
+    color: red;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
   
   #text-stack-box ul {
     list-style: none;
@@ -79,4 +105,51 @@ body {
     margin-right: 5px;
     cursor: pointer;
   }
+
+  #stack-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  
+  .form-group input,
+  .form-group select {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .button-group button {
+    flex: 1;
+    padding: 8px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #eee;
+    transition: background 0.2s;
+  }
+  
+  .button-group button:hover {
+    background-color: #ddd;
+  }
+  
   
