@@ -2,8 +2,10 @@
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
     id: "send-selected-text",
-    title: "Send selected text to FastAPI",
+    title: "Send text to Lead-Gen",
     contexts: ["selection"],
+    documentUrlPatterns: ["<all_urls>"],
+    type: "normal"
   });
 });
 

@@ -33,9 +33,50 @@ body {
     transition: background 0.3s ease;
   }
   
-  #refresh-button {
+  #stack-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 100px; /* ensure scroll space for sticky footer */
+  }
+  
+  #stack-list li {
+    border-bottom: 1px solid #eee;
+    padding: 4px 0;
+    transition: background 0.3s ease;
+  }
+  
+  /* 🔒 Sticky Control Panel */
+  #stack-controls {
+    position: sticky;
+    bottom: 0;
+    background: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid #ddd;
     margin-top: 10px;
-    padding: 4px 10px;
+  }
+  
+  #stack-controls label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  
+  #company-name {
+    width: 100%;
+    padding: 6px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  #refresh-button,
+  #trigger-button {
+    display: inline-block;
+    padding: 6px 10px;
+    margin-right: 5px;
     cursor: pointer;
   }
   

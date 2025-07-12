@@ -8,11 +8,22 @@
 <body>
   <div id="text-stack-box">
     <div class="stack-title">🗂️ Stack Viewer</div>
+
     <ul id="stack-list">
       <li>Loading...</li>
     </ul>
-    <button id="refresh-button">🔄 Refresh</button>
-    <button id="trigger-button">📤 Trigger Action</button>
+
+    <!-- 👇 Controls stay visible -->
+    <div id="stack-controls">
+      <label for="company-name">🏢 Company Name</label>
+      <input
+        type="text"
+        id="company-name"
+        placeholder="Enter company name"
+      />
+      <button id="refresh-button">🔄 Refresh</button>
+      <button id="trigger-button">📤 Trigger Action</button>
+    </div>
   </div>
 
   <script src="content.js"></script>
