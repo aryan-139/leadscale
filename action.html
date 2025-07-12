@@ -41,6 +41,32 @@
           />
         </div>
 
+        <!-- 🌐 Custom Email Domain -->
+        <div class="form-group">
+          <label for="custom-address">🌐 Custom Email Domain</label>
+          <input
+            type="text"
+            id="custom-address"
+            placeholder="e.g. goldmansachs.com"
+          />
+        </div>
+
+        <!-- ✉️ Email Format -->
+        <div class="form-group">
+          <label for="email-format">✉️ Email Format</label>
+          <select id="email-format">
+            <option value="first_last">first_last</option>
+            <option value="first_period_last">first.period.last</option>
+            <option value="first_initial_last">fLast</option>
+            <option value="first_initial_period_last">f.last</option>
+            <option value="first_last_initial">firstLastInitial</option>
+            <option value="first_period_last_initial">first.LastInitial</option>
+            <option value="first_initial_last_initial">fl</option>
+            <option value="last_first">lastFirst</option>
+            <option value="last_first_initial">lastFirstInitial</option>
+          </select>
+        </div>
+
         <div class="button-group">
           <button id="refresh-button">🔄 Refresh</button>
           <button id="trigger-button">📤 Trigger Action</button>

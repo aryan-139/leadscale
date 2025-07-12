@@ -74,7 +74,7 @@ body {
   
   /* 🔒 Sticky Control Panel */
   #stack-controls {
-    position: sticky;
+ 
     bottom: 0;
     background: #fff;
     padding-top: 10px;

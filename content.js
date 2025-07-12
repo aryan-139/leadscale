@@ -57,6 +57,11 @@ document.addEventListener("DOMContentLoaded", () => {
       .getElementById("job-description")
       .value.trim();
     const intent = document.getElementById("intent").value;
+    const customAddress = document
+      .getElementById("custom-address")
+      .value.trim() || null;
+    const emailFormat = document.getElementById("email-format").value || "first_period_last";
+
     if (!companyName) {
       alert("Please enter a company name.");
       return;
@@ -79,6 +84,8 @@ document.addEventListener("DOMContentLoaded", () => {
           company_name: companyName,
           job_description: jobDescription,
           lead_list: stack,
+          custom_address: customAddress,
+          email_format: emailFormat,
         }),
       })
         .then((res) => res.json())
