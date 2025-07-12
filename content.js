@@ -29,5 +29,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
   refreshButton.onclick = fetchStack;
 
-  fetchStack(); // initial load
+  fetchStack(); 
 });

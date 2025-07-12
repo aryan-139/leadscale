@@ -1,46 +1,13 @@
-<!-- stack.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>📦 Stack Viewer</title>
-  <style>
-    body {
-      font-family: monospace;
-      font-size: 14px;
-      margin: 0;
-      padding: 10px;
-      background-color: #fff;
-    }
-    #text-stack-box {
-      width: 300px;
-      max-height: 400px;
-      overflow-y: auto;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-      padding: 10px;
-    }
-    #text-stack-box ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    #text-stack-box li {
-      border-bottom: 1px solid #eee;
-      padding: 4px 0;
-      transition: background 0.3s ease;
-    }
-    #refresh-button {
-      margin-top: 10px;
-      padding: 4px 10px;
-      cursor: pointer;
-    }
-  </style>
+  <title>📦 Send Stack</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div id="text-stack-box">
-    <div style="font-weight: bold; margin-bottom: 8px;">🗂️ Stack Viewer</div>
+    <div class="stack-title">🗂️ Stack Viewer</div>
     <ul id="stack-list">
       <li>Loading...</li>
     </ul>
