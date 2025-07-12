@@ -22,5 +22,9 @@
       "description": "Send selected text to FastAPI"
     }
   },
+  "action": {
+    "default_popup": "action.html",
+    "default_icon": "lead_gen.png"
+  },
   "host_permissions": ["<all_urls>"]
 }
